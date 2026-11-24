@@ -2,7 +2,7 @@
 // Locket Filters & PhotoBooth Bridge
 // Endpoint: api.locketcamera.com/generateFilteredImage
 // Dùng cho: Loon / Quantumult X / Surge / Shadowrocket
-// Tác giả: @duyvinh09
+// Tác giả: itsduyah
 // Vui lòng khi chia sẽ hoặc lấy về, làm ơn để nguồn giúp mình. Mình cảm ơn
 // ============================================================
 var WORKER = "https://locket.dinhduyvinh.tech/generateFilteredImage";
