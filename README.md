@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/badge/platform-iOS-111827?style=flat-pill&logo=apple&logoColor=white" alt="Platform iOS">
   </a>
   <a href="https://github.com/itsduyah">
-    <img src="https://img.shields.io/badge/author-duyvinh09-7c3aed?style=flat-pill&logo=github&logoColor=white" alt="Author itsduyah">
+    <img src="https://img.shields.io/badge/author-itsduyah-7c3aed?style=flat-pill&logo=github&logoColor=white" alt="Author itsduyah">
   </a>
 </p>
 
