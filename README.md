@@ -1,1 +1,13 @@
-itsduyah
+<p align="center">
+  <a href="https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/All_In_One.sgmodule">
+    <img src="https://img.shields.io/badge/version-v2.0-0ea5e9?style=flat-pill" alt="Version v2.0">
+  </a>
+  <a href="https://apps.apple.com/app/shadowrocket/id932747118">
+    <img src="https://img.shields.io/badge/platform-iOS-111827?style=flat-pill&logo=apple&logoColor=white" alt="Platform iOS">
+  </a>
+  <a href="https://github.com/duyvinh09">
+    <img src="https://img.shields.io/badge/author-duyvinh09-7c3aed?style=flat-pill&logo=github&logoColor=white" alt="Author duyvinh09">
+  </a>
+</p>
+
+<h1 align="center">iOS Modules for Shadowrocket</h1>
