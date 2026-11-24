@@ -1,13 +1,10 @@
-console.log(`spotify-json-2025.01.09`);
-let url = $request.url;
-if (url.includes('com:443')) {
-    url = url.replace(/com:443/, 'com');
-}
-if (url.includes('platform=iphone')) {
-    url = url.replace(/platform=iphone/, 'platform=ipad');
-} else {
-    console.log('Không cần xử lý gì cả.');
-}
-$done({
-    url
-});
+// Rewrite only UI device hints; leave authentication and playback untouched.
+const isUiView = /^https:\/\/[^/]+\/(artistview|album-entity-view)\//.test($request.url);
+const url = (isUiView ? $request.url : '').replace(/([?&])(platform=iphone|device_type=smartphone|is_tablet=false|isTablet=false)(?=&|$)/g,
+    (match, separator, value) => separator + ({
+        'platform=iphone': 'platform=ipad',
+        'device_type=smartphone': 'device_type=tablet',
+        'is_tablet=false': 'is_tablet=true',
+        'isTablet=false': 'isTablet=true'
+    })[value]);
+$done(!isUiView || url === $request.url ? {} : {url});
