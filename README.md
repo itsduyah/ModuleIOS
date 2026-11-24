@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/All_In_One.sgmodule">
+  <a href="https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/itsduyah.sgmodule">
     <img src="https://img.shields.io/badge/version-v2.0-0ea5e9?style=flat-pill" alt="Version v2.0">
   </a>
   <a href="https://apps.apple.com/app/shadowrocket/id932747118">
