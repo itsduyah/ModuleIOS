@@ -77,6 +77,10 @@ Wink =type=http-response,pattern=^https:\/\/api-sub\.meitu\.com\/v2\/user\/vip_i
 Truecaller = type=http-response,pattern=^https:\/\/premium-[^.]+\.truecaller\.com\/v\d+\/(subscriptions\/status|products\/apple)(\?.*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/TrueCaller.js
 #************************************#
 
+#Lightroom
+#hostname =  photos.adobe.io
+Lightroom = type=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v\d\/(accounts|subscriptions|entitlements|profile|me|commerce|receipts),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/lightroom.js,script-update-interval=86400
+#************************************#
 
 #Kinemaster
 #hostname =  api-account.kinemasters.com
