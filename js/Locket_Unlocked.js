@@ -57,7 +57,7 @@ if (ua.includes("Locket")) {
             title: "Đã mở khoá Locket Gold 💛",
             feature_set: [
                 {
-                    title: "Nhớ follow phở bò: itsduyah nha ✨",
+                    title: "Nhớ follow phở bò itsduyah nha ✨",
                     body: "Chúc bạn dùng Locket vui vẻ 🥳",
                     imageURL: "https://locket.dinhduyvinh.tech/images/feature_discovery.avif"
                 }
