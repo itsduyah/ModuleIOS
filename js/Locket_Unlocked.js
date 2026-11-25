@@ -54,15 +54,15 @@ if (ua.includes("Locket")) {
             tag: "LOCKET GOLD ALL FEATURES",
             tag_gradient: true,
             tag_style: "gold_gradient",
-            title: "Lên Locket Gold 💛 rồi đó",
+            title: "Đã mở khoá Locket Gold 💛",
             feature_set: [
                 {
-                    title: "Nhớ follow kênh phở bò itsduyah ✨",
-                    body: "Một follow của bạn, một niềm vui của mình 💛",
+                    title: "Nhớ follow phở bò: itsduyah nha ✨",
+                    body: "Chúc bạn dùng Locket vui vẻ 🥳",
                     imageURL: "https://locket.dinhduyvinh.tech/images/feature_discovery.avif"
                 }
             ],
-            primary_button_title: "Xong rồi nhé!",
+            primary_button_title: "Xong!",
             campaign: "locket_gold_welcome_v3",
             start_at: "2020-01-01T00:00:00",
             end_at: "2099-12-31T23:59:59",
