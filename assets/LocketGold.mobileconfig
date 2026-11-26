@@ -6,7 +6,7 @@
     <string>LocketGold💛 by itsduyah</string>
 
     <key>PayloadDescription</key>
-    <string>Hồ sơ cầu hình chặn thu hồi Locket Gold vĩnh viễn.&#10;liên hệ phở bò: itsduyah&#10;bắt kì thằng nào bán Module và DNS đều scam.</string>
+    <string>Hồ sơ cấu hình chặn thu hồi Locket Gold vĩnh viễn.&#10;. Thấy thằng nào bán Module và DNS đều là scam vì mấy cái này toàn free. Liên hệ phở bò: itsduyah</string>
 
     <key>PayloadIdentifier</key>
     <string>com.duyvinh09.locketgold.profile</string>
