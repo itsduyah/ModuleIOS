@@ -1,7 +1,10 @@
 #!name=itsduyah
-#!desc=Được tổng hợp bởi itsduyah
+#!desc=Được tổng hợp bởi Duy Anh
 #!author=itsduyah
-#!configUrl=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/itsduyah.sgmodule
+#!homepage=https://github.com/itsduyah
+#!tgchannel=https://fb.com/itsduyah
+#!moduleUrl=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/itsduyah.sgmodule
+#!icon=https://module-ios.netlify.app/assets/img/shadowrocket.webp
 #!howtouse=Shadowrocket
 #Shadowrocket Configuration - itsduyah
 
@@ -12,7 +15,7 @@ AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT
 [Header Rewrite]
 ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
 ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
-http-request ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize$ header-del if-none-match
+http-request ^https:\/\/(?:spclient\.wg\.spotify\.com|[\w-]+-spclient\.spotify\.com)(?::443)?\/user-customization-service\/v1\/customize$ header-del if-none-match
 
 [Url Rewrite]
 # Chặn quảng cáo Google Video
@@ -43,17 +46,18 @@ youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.c
 
 #SpotifyPremium
 #hostname = spclient.wg.spotify.com
-spotify-json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/spotify-json.js
-spotify-proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize|pam-view-service\/),requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/spotify-proto.js,script-update-interval=0
+spotify-json = type=http-request,pattern=^https:\/\/(?:spclient\.wg\.spotify\.com|[\w-]+-spclient\.spotify\.com)(?::443)?\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/spotify-json.js
+spotify-proto = type=http-response,pattern=^https:\/\/(?:spclient\.wg\.spotify\.com|[\w-]+-spclient\.spotify\.com)(?::443)?\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize|pam-view-service\/),requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/spotify-proto.js,script-update-interval=0
 #************************************#
 
 #SoundCloudGo+
-#hostname= api-mobile.soundcloud.com
+#hostname = api-mobile.soundcloud.com
 SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/SoundCloudGoPlus.js
 #************************************#
 
 #VSCO
-VSCO = type=http-request ^https://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/VSCO.js, requires-body=true, timeout=60
+#hostname = api.revenuecat.com
+VSCO = type=http-request, pattern=^https://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$), script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/VSCO.js, requires-body=true, max-size=-1, timeout=60
 #************************************#
 
 #AlightMotion
@@ -64,7 +68,7 @@ AlightMotion = type=http-response,script-path=https://raw.githubusercontent.com/
 #PicsArt
 #hostname = api.picsart.com
 PicsArt = type=http-request,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/shop\/subscription\/apple\/purchases,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/PicsArt.js,requires-body=true,timeout=60
-PicsArtStorages = type=http-request,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/cloud-storage\/v1\/me\/storages,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/PicsArtStorages.js,requires-body=true,timeout=60
+PicsArtStorages = type=http-response,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/cloud-storage\/v1\/me\/storages,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/PicsArtStorages.js,requires-body=1,max-size=0
 #************************************#
 
 #Wink
@@ -102,13 +106,12 @@ BeautyPlus = type=http-response, pattern=https:\/\/(api\.mr\.pixocial\.com\/v1\/
 revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/Locket_itsduyah.js, requires-body=true, max-size=-1, timeout=60
 deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/deleteHeader.js, timeout=60
 locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/Locket_Unlocked.js, requires-body=true, max-size=-1, timeout=60
-locket_setclientdata = type=http-request, pattern=^https:\/\/api\.locketcamera\.com\/setClientData, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Locket_rc_us.js, timeout=10
 #************************************#
 
 #RevenueCatVip
 #hostname = api.revenuecat.com
 RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/revenuecat.js, requires-body=true, max-size=-1, timeout=60
-#RevenueCatDeleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/deleteHeader.js timeout=60
+#RevenueCatDeleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/deleteHeader.js, timeout=60
 #************************************#
 
 #iTunes
@@ -123,7 +126,7 @@ Snow = type=http-response, pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/pur
 
 #Meitu
 #hostname = h5.xiuxiu.meitu.com, api.xiuxiu.meitu.com
-Meitu = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/MeiTuXiuXiu.js
+Meitu = type=http-response, pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1, script-path=https://raw.githubusercontent.com/itsduyah/ModuleIOS/refs/heads/main/js/MeiTuXiuXiu.js
 #************************************#
 
 #Doulingo
