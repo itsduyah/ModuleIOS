@@ -54,10 +54,10 @@ if (ua.includes("Locket")) {
             tag: "LOCKET GOLD ALL FEATURES",
             tag_gradient: true,
             tag_style: "gold_gradient",
-            title: "Lên Locket Gold rồi đó 😎",
+            title: "Đã mở khoá Locket Gold 💛",
             feature_set: [
                 {
-                    title: "Nhớ follow kênh tiktok @duyvinh.09 ✨",
+                    title: "Nhớ follow phở bò itsduyah nhé ✨",
                     body: "Một follow của bạn, một niềm vui của mình 💛",
                     imageURL: "https://locket.dinhduyvinh.tech/images/feature_discovery.avif"
                 }
@@ -71,8 +71,8 @@ if (ua.includes("Locket")) {
         android_subscribe_gold_button_enabled: "false",
         profile_badge_visible: "true",
         lunar_new_year_app_icon_enabled: "true",
-        settings_instagram_url: "https://www.instagram.com/dvinh.09/",
-        settings_tiktok_url: "https://tiktok.com/@duyvinh.09",
+        settings_instagram_url: "https://www.instagram.com/itsduyah",
+        settings_tiktok_url: "https://tiktok.com/",
         star_sign_caption_image_url: "https://storage.googleapis.com/locket-public/overlays/star_signs",
     });
 
