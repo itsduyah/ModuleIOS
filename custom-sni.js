@@ -2,8 +2,8 @@
  substore-tools - Made with ❤️ in Hanoi
  Build fullhash:cad11a01116e878f02a1, chunkhash:557d58c389619718cc2d (2024-06-15 16:01:02)
 
- Author: Kien Tran
- Decode: Duy Vinh
+ Author: Duy Anh
+ Decode: Duy Anh
 */
 (() => {
   (() => {
