@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>PayloadDisplayName</key>
-    <string>LocketGold💛 by itsduyah</string>
+    <string>Locket Gold 💛 by itsduyah</string>
 
     <key>PayloadDescription</key>
     <string>Hồ sơ cấu hình chặn thu hồi Locket Gold vĩnh viễn.&#10;Thấy thằng nào bán Module và DNS đều là scam vì mấy cái này toàn free.&#10;Liên hệ phở bò: itsduyah</string>
@@ -56,10 +56,10 @@
             <string>6E7D9C2A-5B41-4F83-9A62-D1E0B7C845AF</string>
 
             <key>PayloadDisplayName</key>
-            <string>Locket Gold DNS</string>
+            <string>DNS chặn thu hồi Locket Gold 💛</string>
 
             <key>PayloadOrganization</key>
-            <string>Duy Anh</string>
+            <string>itsduyah</string>
 
             <key>PayloadVersion</key>
             <integer>1</integer>
