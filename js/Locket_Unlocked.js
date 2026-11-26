@@ -58,11 +58,11 @@ if (ua.includes("Locket")) {
             feature_set: [
                 {
                     title: "Nhớ follow phở bò itsduyah nhé ✨",
-                    body: "Chúc bạn dùng Locket Gold vui vẻ 🥳",
+                    body: "Chúc bạn dùng Locket Gold vui vẻ và lưu giữ nhiều kỉ niệm đẹp 🥳",
                     imageURL: "https://locket.dinhduyvinh.tech/images/feature_discovery.avif"
                 }
             ],
-            primary_button_title: "Okeee!",
+            primary_button_title: "Okee<3",
             campaign: "locket_gold_welcome_v3",
             start_at: "2020-01-01T00:00:00",
             end_at: "2099-12-31T23:59:59",
